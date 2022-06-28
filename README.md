@@ -1,7 +1,12 @@
 # RedisAI-demo
 
-## Setup
-### serving-by-fastapi
+## Examples
+ - 1. serving-by-fastapi
+ - 2. redis-cluster-by-docker-compose
+<br>
+
+## Ex 1. serving-by-fastapi
+### Setup
 1. Git clone 
 ```bash
 git clone https://github.com/jaehyeongAN/RedisAI-demo.git
@@ -21,29 +26,9 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app 
 ```
+<br>
 
-### redis-cluster-by-docker-compose
-1. Git clone 
-```bash
-git clone https://github.com/jaehyeongAN/RedisAI-demo.git
-```
-
-2. Move to dir
-```bash
-cd RedisAI-demo/redis-cluster-by-docker-compose
-```
-
-3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-4. ...
-
-
-
-## Endpoint 
-### serving-by-fastapi
+### Endpoint 
 1. <code>/train</code>
  - 1. Load iris dataset.
  - 2. Train model using LogisticRegression of sklearn.
@@ -63,6 +48,7 @@ http GET "localhost:8000/inference?model=iris-clf&sepal_length=4.7&sepal_width=3
 ```
 ![](./tmp/inference-fastapi.png)
 
+<br>
 
-### redis-cluster-by-docker-compose
- - 1. ...
+## Ex 2. redis-cluster-by-docker-compose
+...
