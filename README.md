@@ -1,8 +1,8 @@
 # RedisAI-demo
 
 ## Examples
- - 1. serving-by-fastapi
- - 2. redis-cluster-by-docker-compose
+ - **serving-by-fastapi**
+ - **redis-cluster-by-docker-compose**
 <br>
 
 ## Ex 1. serving-by-fastapi
