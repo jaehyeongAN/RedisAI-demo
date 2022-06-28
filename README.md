@@ -1,11 +1,11 @@
 # RedisAI-demo
 
 ## Examples
- - [**serving-by-fastapi**](https://github.com/jaehyeongAN/RedisAI-demo#ex-1-serving-by-fastapi)
- - [**redis-cluster-by-docker-compose**](https://github.com/jaehyeongAN/RedisAI-demo#ex-2-redis-cluster-by-docker-compose)
+ - [**serving-by-fastapi**](https://github.com/jaehyeongAN/RedisAI-demo#ex-1-serving-by-fastapi-%EF%B8%8F)
+ - [**redis-cluster-by-docker-compose**](https://github.com/jaehyeongAN/RedisAI-demo#ex-2-redis-cluster-by-docker-compose-%EF%B8%8F)
 <br>
 
-## Ex 1. ⚡️ serving-by-fastapi
+## Ex 1. serving-by-fastapi ⚡️
 - 해당 데모는 FastAPI와 RedisAI를 활용한 간단한 모델 학습 및 추론 API 서버 구축을 목표로 합니다.
 - FastAPI는 프록시 서버로서 endpoint를 제공하며 RedisAI Python SDK를 통해 모델 배포 및 추론을 RedisAI에 요청합니다.
 - RedisAI는 학습된 모델을 저장/관리 및 추론 연산을 수행합니다. 
@@ -57,7 +57,7 @@ http GET "localhost:8000/inference?model=iris-clf&sepal_length=4.7&sepal_width=3
 
 <br>
 
-## Ex 2. 👨‍👩‍👧‍👦 redis-cluster-by-docker-compose
+## Ex 2. redis-cluster-by-docker-compose ⚡️
  - 해당 데모는 RedisAI Cluster 구축을 목표로 합니다.
  - 3 Master - 3 Replica 구성의 Cluster를 Docker Compose를 통해 구성합니다.
 ![](./tmp/redis-cluster.png)
