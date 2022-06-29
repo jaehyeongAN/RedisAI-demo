@@ -198,13 +198,11 @@ redis-cli -c -p 7001
 ### 5. Test Redis Cluster
 1. Basic Redis Commands
 ```
-> set a 1
-> set b 2
-> set c 3
+> set a 123
+> set b 456
 
 > get a 
 > get b
-> get c
 ```
 ![](./tmp/basic-redis-commands.png)
 
