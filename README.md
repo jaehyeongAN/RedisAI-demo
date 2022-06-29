@@ -1,6 +1,6 @@
 # RedisAI-demo
 
-## Examples
+## Contents 🔖
  - [**serving-by-fastapi**](https://github.com/jaehyeongAN/RedisAI-demo#ex-1-serving-by-fastapi-%EF%B8%8F)
  - [**redis-cluster-by-docker-compose**](https://github.com/jaehyeongAN/RedisAI-demo#ex-2-redis-cluster-by-docker-compose-%EF%B8%8F)
 <br>
