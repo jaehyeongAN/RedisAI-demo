@@ -59,6 +59,8 @@ http GET "localhost:8000/inference?model=iris-clf&sepal_length=4.7&sepal_width=3
 ## Ex 2. redis-cluster-by-docker-compose ⚡️
  - 해당 데모는 RedisAI Cluster 구축을 목표로 합니다.
  - 3 Master - 3 Replica 구성의 Cluster를 Docker Compose를 통해 구성합니다.
+ - Redis docker image는 [bitnami/redis](https://hub.docker.com/r/bitnami/redis/)를 기반으로 하며, 
+ - RedisAI의 경우 미리 빌드된 [redisai 모듈 (redisai.so)](https://github.com/jaehyeongAN/RedisAI-demo/blob/main/redis-cluster-by-docker-compose/redisai.so)을 redis-server 실행시 로드하는 방식으로 구동합니다.
 ![](./tmp/redis-cluster.png)
 
 
