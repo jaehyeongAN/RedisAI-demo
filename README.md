@@ -6,7 +6,7 @@
 <br>
 
 ## Ex 1. serving-by-fastapi ⚡️
-- 해당 데모는 FastAPI와 RedisAI를 활용한 간단한 모델 학습 및 추론 API 서버 구축을 목표로 합니다.
+- 해당 데모는 FastAPI와 RedisAI를 활용하여 간단한 모델 학습 및 추론을 위한 API 서버 구축을 목표로 합니다.
 - FastAPI는 프록시 서버로서 endpoint를 제공하며 RedisAI Python SDK를 통해 모델 배포 및 추론을 RedisAI에 요청합니다.
 - RedisAI는 학습된 모델을 저장/관리 및 추론 연산을 수행합니다. 
 
@@ -33,14 +33,13 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app 
 ```
-<br>
 
 ### Endpoint 
 1. <code>/train</code>
  - 1. Load iris dataset.
  - 2. Train model using LogisticRegression of sklearn.
- - 3. Conver sklearn model to ONNX model.
- - 4. Save ONNX model to RedisAI
+ - 3. Convert sklearn model to ONNX model.
+ - 4. Deploy ONNX model to RedisAI
 ```bash
 http GET localhost:8000/train
 ```
