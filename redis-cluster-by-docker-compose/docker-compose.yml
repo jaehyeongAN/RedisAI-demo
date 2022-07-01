@@ -13,7 +13,7 @@ services:
     environment:
       - REDIS_REPLICATION_MODE=master
       - ALLOW_EMPTY_PASSWORD=yes
-    command: redis-server /usr/local/etc/redis/redis.conf --port 7001 --loadmodule /usr/lib/redis/modules/redisai.so --protected-mode no
+    command: redis-server /usr/local/etc/redis/redis.conf --port 7001 --protected-mode no
     
   redis-replica-1:
     image: bitnami/redis
@@ -29,7 +29,7 @@ services:
       - REDIS_REPLICATION_MODE=slave
       - REDIS_MASTER_HOST=redis-master-1
       - ALLOW_EMPTY_PASSWORD=yes
-    command: redis-server /usr/local/etc/redis/redis.conf --port 7002 --loadmodule /usr/lib/redis/modules/redisai.so --protected-mode no
+    command: redis-server /usr/local/etc/redis/redis.conf --port 7002 --protected-mode no
     depends_on:
       - redis-master-1
 
@@ -47,7 +47,7 @@ services:
     environment:
       - REDIS_REPLICATION_MODE=master
       - ALLOW_EMPTY_PASSWORD=yes
-    command: redis-server /usr/local/etc/redis/redis.conf --port 7003 --loadmodule /usr/lib/redis/modules/redisai.so --protected-mode no
+    command: redis-server /usr/local/etc/redis/redis.conf --port 7003 --protected-mode no
 
   redis-replica-2:
     image: bitnami/redis
@@ -63,7 +63,7 @@ services:
       - REDIS_REPLICATION_MODE=slave
       - REDIS_MASTER_HOST=redis-master-2
       - ALLOW_EMPTY_PASSWORD=yes
-    command: redis-server /usr/local/etc/redis/redis.conf --port 7004 --loadmodule /usr/lib/redis/modules/redisai.so --protected-mode no
+    command: redis-server /usr/local/etc/redis/redis.conf --port 7004 --protected-mode no
     depends_on:
       - redis-master-2
 
@@ -81,7 +81,7 @@ services:
     environment:
       - REDIS_REPLICATION_MODE=master
       - ALLOW_EMPTY_PASSWORD=yes
-    command: redis-server /usr/local/etc/redis/redis.conf --port 7005 --loadmodule /usr/lib/redis/modules/redisai.so --protected-mode no
+    command: redis-server /usr/local/etc/redis/redis.conf --port 7005 --protected-mode no
 
   redis-replica-3:
     image: bitnami/redis
@@ -97,6 +97,6 @@ services:
       - REDIS_REPLICATION_MODE=slave
       - REDIS_MASTER_HOST=redis-master-3
       - ALLOW_EMPTY_PASSWORD=yes
-    command: redis-server /usr/local/etc/redis/redis.conf --port 7006 --loadmodule /usr/lib/redis/modules/redisai.so --protected-mode no
+    command: redis-server /usr/local/etc/redis/redis.conf --port 7006 --protected-mode no
     depends_on:
       - redis-master-3
