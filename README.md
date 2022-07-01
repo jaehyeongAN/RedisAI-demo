@@ -1,12 +1,12 @@
 # RedisAI-demo
 
-## Examples
+## Contents 🔖
  - [**serving-by-fastapi**](https://github.com/jaehyeongAN/RedisAI-demo#ex-1-serving-by-fastapi-%EF%B8%8F)
  - [**redis-cluster-by-docker-compose**](https://github.com/jaehyeongAN/RedisAI-demo#ex-2-redis-cluster-by-docker-compose-%EF%B8%8F)
 <br>
 
 ## Ex 1. serving-by-fastapi ⚡️
-- 해당 데모는 FastAPI와 RedisAI를 활용한 간단한 모델 학습 및 추론 API 서버 구축을 목표로 합니다.
+- 해당 데모는 FastAPI와 RedisAI를 활용하여 간단한 모델 학습 및 추론을 위한 API 서버 구축을 목표로 합니다.
 - FastAPI는 프록시 서버로서 endpoint를 제공하며 RedisAI Python SDK를 통해 모델 배포 및 추론을 RedisAI에 요청합니다.
 - RedisAI는 학습된 모델을 저장/관리 및 추론 연산을 수행합니다. 
 
@@ -33,14 +33,13 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app 
 ```
-<br>
 
 ### Endpoint 
 1. <code>/train</code>
  - 1. Load iris dataset.
  - 2. Train model using LogisticRegression of sklearn.
- - 3. Conver sklearn model to ONNX model.
- - 4. Save ONNX model to RedisAI
+ - 3. Convert sklearn model to ONNX model.
+ - 4. Deploy ONNX model to RedisAI
 ```bash
 http GET localhost:8000/train
 ```
@@ -60,6 +59,7 @@ http GET "localhost:8000/inference?model=iris-clf&sepal_length=4.7&sepal_width=3
 ## Ex 2. redis-cluster-by-docker-compose ⚡️
  - 해당 데모는 RedisAI Cluster 구축을 목표로 합니다.
  - 3 Master - 3 Replica 구성의 Cluster를 Docker Compose를 통해 구성합니다.
+ - Redis docker image는 [bitnami/redis](https://hub.docker.com/r/bitnami/redis/)를 기반으로 하며, RedisAI의 경우 미리 빌드된 [redisai 모듈 (redisai.so)](https://github.com/jaehyeongAN/RedisAI-demo/blob/main/redis-cluster-by-docker-compose/redisai.so)을 redis-server 실행시 로드하는 방식으로 구동합니다.
 ![](./tmp/redis-cluster.png)
 
 
@@ -198,13 +198,11 @@ redis-cli -c -p 7001
 ### 5. Test Redis Cluster
 1. Basic Redis Commands
 ```
-> set a 1
-> set b 2
-> set c 3
+> set a 123
+> set b 456
 
 > get a 
 > get b
-> get c
 ```
 ![](./tmp/basic-redis-commands.png)
 
